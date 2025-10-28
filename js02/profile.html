@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+</head>
+<body>
+  
+    <h2 id="name"></h2>
+    <p id="bio"></p>
+    <p id="details"></p>
+    
+    <script>
+        // Store profile information in variables
+        // ЗМІННІ, ЩО ЗМІНЮЮТЬСЯ (let)
+        let firstName = "Illia";
+        // КОНСТАНТИ, ЩО НЕ ЗМІНЮЮТЬСЯ (const)
+        const lastName = "Prorokov";
+        let age = 17;
+        let city = "Brunswick";
+        let isStudent = true;
+        
+        // Display the full Illia
+        // Виведення повного імені (використовуємо шаблонні рядки з `)
+        document.getElementById('name').textContent = `${firs} ${name}`;
+        
+        // Display bio
+        // Виведення біографії
+        document.getElementById('bio').textContent = `I am ${age} years old and live in ${city}.`;
+        
+        // Display student status
+        // Виведення статусу студента
+        document.getElementById('details').textContent = `Student: ${isStudent}`;
+        
+        // Also log everything to console
+        console.log('Name:', firstName, lastName);
+        console.log('Age:', age);
+        console.log('City:', city);
+        console.log('Is Student:', isStudent);
+    </script>
+</body>
+</html>
