@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Заголовок сторінки, відображається у вкладці браузера -->
+    <title>Personal Introduction: My Project (Single File)</title>
+    <style>
+        /* Додамо базові стилі для кращого вигляду */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        main {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+        }
+        small {
+            display: block;
+            margin-bottom: 20px;
+            color: #666;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Головний контейнер, який буде містити весь контент -->
+    <main id="content-area">
+        <!-- Початковий вміст. Цей текст буде швидко замінено або додано JavaScript-ом. -->
+        <p>Loading information about me...</p>
+    </main>
+    
+    <!-- Вбудований блок JavaScript, який замінює about-me.js -->
+    <script>
+        /*
+        ======================================================
+        Файл: about-me-single.html (Вбудований скрипт)
+        Опис: Скрипт особистого представлення, що використовує
+              JavaScript для додавання контенту на сторінку
+              і взаємодії з консоллю.
+        Автор: Illia Prorokov
+        ======================================================
+        */
+        
+        // --- Частина 1: Початкові дії та Консоль ---
+
+        // Виводимо повідомлення в консоль, щоб підтвердити, що скрипт почав виконуватись.
+        console.log('1. Script about-me.js loaded successfully.');
+
+        // Відображаємо спливаюче вікно, яке вітає відвідувача, відповідно до вимог.
+        alert('Welcome! Welcome to my personal introduction page.');
+
+        // Додаткове випробування: Записуємо точний час завантаження сторінки в консоль.
+        const loadTime = new Date().toLocaleTimeString('en-US');
+        console.log(`2. Page loaded at: ${loadTime}`);
+
+
+        // --- Частина 2: Додавання контенту на сторінку (document.write) ---
+
+        // Використовуємо document.write() для запису мого імені як заголовка першого рівня.
+        // Це повинен бути єдиний H1 на сторінці.
+        document.write('<h1>Hello, I am Illia Prorokov!</h1>');
+
+        // Додаткове випробування: Додаємо поточну дату на сторінку.
+        const todayDate = new Date().toLocaleDateString('en-US');
+        document.write(`<small>Created on: ${todayDate}</small>`);
+
+        // Додаємо перший параграф про себе.
+        // Оновлено: Підкреслюємо статус студента та ціль.
+        document.write('<p>I am currently an enthusiastic student focused on mastering the fundamentals of Web Development, starting with HTML, CSS, and JavaScript. My primary goal is to transform creative ideas into functional and interactive digital experiences on the web.</p>');
+
+        // Додаємо другий параграф, зосереджений на навичках та навчанні.
+        // Оновлено: Зосереджено на процесі навчання та вирішенні проблем.
+        document.write('<p>Beyond the core web technologies, I am actively exploring new skills and concepts, especially those related to front-end frameworks and design principles. I find the process of debugging and problem-solving incredibly rewarding, and I strive to write clean, efficient, and well-commented code.</p>');
+
+        // Додаємо третій параграф, зосереджений на хобі та майбутніх цілях.
+        // Оновлено: Включаємо гітару як творче хобі.
+        document.write('<p>Outside of coding, my main passion is playing the guitar. Music offers a perfect balance to the logic of programming, allowing me to express creativity in a different way. Looking forward, my career ambition is to become a skilled Full-stack Developer who can handle both the visual aspects of a project and the underlying server logic.</p>');
+
+
+        // --- Частина 3: Завершення та Консоль ---
+
+        // Додаткове повідомлення в консоль, що підтверджує завершення виконання JavaScript.
+        console.log('3. All content has been written to the document and script execution is complete.');
+    </script>
+</body>
+</html>

@@ -1,23 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Comments Practice</title>
+    <title>Особисте Представлення: Мій Проєкт</title>
 </head>
 <body>
-    <h1>My Page</h1>
+    <!-- Головний контейнер для вмісту, що буде додано JavaScript-ом -->
+    <main id="content-area">
+        <!-- Початковий вміст. Весь текст буде замінено або додано за допомогою about-me.js -->
+        <p>Завантаження інформації про мене...</p>
+    </main>
     
-    <script>
-        // Start by displaying a message in the console to indicate the program execution has begun
-        console.log('Starting the program...');
-        
-        // Display an alert dialog box with a "Welcome!" message to the user (Note: alerts are usually avoided in production code)
-        alert('Welcome!');
-        
-        // Write a new HTML paragraph element directly into the document
-        document.write('<p>JavaScript is awesome!</p>');
-        
-        // Display a final message in the console indicating the program has finished executing
-        console.log('Program finished!');
-    </script>
+    <!-- Підключення зовнішнього файлу JavaScript. Розміщуємо його в кінці <body> для кращої продуктивності. -->
+    <script src="about-me.js"></script>
 </body>
 </html>
