@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Const vs Let</title>
+    <style>
+        body { 
+            font-family: 'Courier New', Courier, monospace; 
+            padding: 20px; 
+            background-color: #fafafa; 
+            max-width: 600px;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+        h1 { 
+            color: #f39c12; 
+            text-align: center;
+        }
+        #output { 
+            border: 2px solid #f39c12; 
+            padding: 15px; 
+            background-color: #fff9e5; 
+            border-radius: 6px;
+            margin-top: 20px;
+            line-height: 1.8;
+        }
+        p {
+            margin-top: 15px;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <h1>Understanding Const and Let</h1>
+    <p>Check the console (F12). To see the error, **uncomment** the `birthYear = 2006;` line and reload the page.</p>
+    <div id="output"></div>
+    
+    <script>
+        // --- CONST Variables (Використовуйте const для значень, які є постійними) ---
+        const birthYear = 2008; // Рік народження (постійна величина).
+        const hometown = "Ukraine"; // Місце народження (постійна).
+        const schoolName = "Central Brunswick HS"; // Назва школи (постійна).
+        
+        // --- LET Variables (Використовуйте let для значень, які можуть змінюватися) ---
+        let currentYear = 2025; // Поточний рік (змінюється).
+        let age = 20; // Вік (змінюється щороку).
+        let grade = 10; // Клас (змінюється).
+        
+        
+        // Try to change a const - this will cause an ERROR! (Спроба змінити const - це спричинить помилку!)
+        // birthYear = 2006;  // Розкоментуйте цей рядок, щоб побачити помилку: "TypeError: Assignment to constant variable"
+        
+        
+        // Changing let variables is fine (Зміна змінних let відбувається успішно)
+        age = 21; // Оновлюємо вік
+        grade = 11; // Оновлюємо клас
+        
+        
+        // Display the information (Відображаємо інформацію на сторінці)
+        let info = `
+            <strong>CONST Data:</strong><br>
+            Birth Year: ${birthYear}<br>
+            Hometown: ${hometown}<br>
+            School Name: ${schoolName}<br>
+            
+            <br>
+            <strong>LET Data (Changed):</strong><br>
+            Current Year: ${currentYear}<br>
+            Current Age: ${age} (**Updated** from 20 to 21)<br>
+            Current Grade: ${grade} (**Updated** from 10 to 11)
+        `;
+        
+        document.getElementById('output').innerHTML = info;
+        
+        // Log to console (Логуємо в консоль)
+        console.log("Birth Year (const):", birthYear);
+        console.log("Age (let, final value):", age);
+    </script>
+</body>
+</html>

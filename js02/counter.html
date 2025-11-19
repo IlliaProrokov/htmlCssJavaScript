@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Variable Reassignment</title>
+    <!-- Додаємо стилі для кращого відображення рахунку -->
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            max-width: 400px; 
+            margin: 20px auto; 
+            background-color: #e8f8f5; 
+            border-radius: 8px; 
+        }
+        h1 { 
+            color: #16a085; 
+            text-align: center;
+        }
+        h2 { 
+            color: #2c3e50; 
+            padding: 8px; 
+            margin: 10px 0; 
+            border: 1px dashed #1abc9c; 
+            background-color: white; 
+            border-radius: 4px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Score Tracker</h1>
+    
+    <h2 id="initial"></h2>
+    <h2 id="updated"></h2>
+    <h2 id="final"></h2>
+    
+    <script>
+        // Step 1: Create score variable (Створюємо змінну score)
+        let score = 0;
+        
+        // Step 2: Display and log initial score (Початковий рахунок: 0)
+        document.getElementById("initial").textContent = "Initial score: " + score;
+        console.log("Score:", score);
+        
+        // Step 3: Add 10 to score (Додаємо 10 до рахунку)
+        score += 10; // Це означає score = score + 10
+        
+        // Step 4: Display and log updated score (Відображаємо та логуємо оновлений рахунок: 10)
+        document.getElementById("updated").textContent = "Updated score: " + score;
+        console.log("Score:", score);
+        
+        // Step 5: Add 5 more to score (Додаємо ще 5 до рахунку)
+        score += 5;
+        
+        // Step 6: Display and log final score (Відображаємо та логуємо фінальний рахунок: 15)
+        document.getElementById("final").textContent = "Final score: " + score;
+        console.log("Score:", score);
+    </script>
+</body>
+</html>

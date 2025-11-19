@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Debug Practice</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background-color: #fcecec; text-align: center; }
+        h1 { color: #c0392b; }
+        #output { 
+            color: #2c3e50; 
+            font-size: 1.5em; 
+            border: 2px solid #27ae60; /* Змінено колір на зелений, щоб показати успіх */
+            padding: 10px; 
+            display: inline-block; 
+            background-color: white; 
+            border-radius: 6px;
+        }
+        .success {
+            color: #27ae60;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Debug Challenge: <span class="success">Fixed!</span></h1>
+    <p>Check the console (F12) for successful output without errors. The output should be: "Emma is 25 years old".</p>
+    <h1 id="output"></h1>
+    
+    <script>
+        // Fix the errors in this code! (Виправлено 5 помилок)
+        
+        // ❌ Помилка 1: Виправлено пробіл у назві змінної (first name -> firstName)
+        let firstName = "Emma"; 
+        
+        // ❌ Помилка 2: Виправлено невідповідність лапок (додано закриваючу лапку)
+        let age = "25";
+        
+        const favoriteColor = "blue";
+        
+        // ❌ Помилка 4: Виправлено невірне ім'я змінної (ім'я не може починатися з числа, 2ndPlace -> secondPlace)
+        let secondPlace = "silver"; 
+        
+        // ❌ Помилка 3: Закоментовано переприсвоєння const, оскільки це заборонено
+        // favoriteColor = "red"; 
+        
+        // ❌ Помилка 5: Виправлено невірну назву змінної у шаблонному літералі (використовуємо firstName, а не first name)
+        let message = `${firstName} is ${age} years old`;
+        document.getElementById('output').textContent = message;
+        
+        console.log(message);
+    </script>
+</body>
+</html>

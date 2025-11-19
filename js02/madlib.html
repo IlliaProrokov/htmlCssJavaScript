@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mad Lib Story</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f0f8ff;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        .story {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            line-height: 1.6;
+            font-size: 1.1em;
+            color: #333;
+        }
+        span {
+            font-weight: bold;
+            color: #e74c3c; /* Колір для виділення змінних */
+        }
+    </style>
+</head>
+<body>
+    <h1>My Mad Lib Story</h1>
+    <div class="story" id="storyOutput"></div>
+    
+    <script>
+        // CHANGE THESE variables to make them your own (Змініть ці змінні, щоб створити свою історію)
+        // Створено 8 змінних, як того вимагає завдання:
+        const adjective = "fluffy"; // Прикметник: пухнастий
+        const noun = "cucumber"; // Іменник: огірок
+        const verb = "yawned loudly"; // Дієслово: голосно позіхав
+        const place = "Mars' Olympus Mons"; // Місце: гора Олімп на Марсі
+        const animal = "armadillo"; // Тварина: броненосець
+        const number = 1000; // Число: 1000
+        const color = "magenta"; // Колір: маджента
+        const personName = "Grandma Ksenia"; // Ім'я: Бабуся Ксенія
+        
+        // Create your OWN NEW story using template literals. (Створюємо ІСТОРІЮ, використовуючи шаблонні літерали)
+        // Використовуємо <span> для стилізації вставлених слів.
+        let story = `
+            <p>One sunny Tuesday, a fearless explorer named <span>${personName}</span> 
+            decided to take her pet <span>${animal}</span> for a walk on <span>${place}</span>.</p>
+            
+            <p>They soon discovered a very <span>${adjective}</span> object, 
+            which turned out to be a giant, <span>${color}</span> <span>${noun}</span>. 
+            This was definitely a rare find!</p>
+            
+            <p>Grandma Ksenia decided to take a picture, but the <span>${animal}</span> 
+            got bored and suddenly <span>${verb}</span>.</p>
+            
+            <p>She checked the clock; it was exactly <span>${number}</span> hours 
+            past breakfast. Time flies when you're exploring space!</p>
+        `;
+        
+        // Display the story (Відображаємо історію на сторінці)
+        document.getElementById('storyOutput').innerHTML = story;
+        
+        // Also log to console (Також логуємо в консоль)
+        console.log("Story:", story);
+    </script>
+</body>
+</html>

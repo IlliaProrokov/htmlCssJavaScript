@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Story Builder</title>
+    <!-- Додаємо базові стилі для кращого відображення тексту -->
+    <style>
+        body { 
+            font-family: Georgia, serif; 
+            padding: 30px; 
+            background-color: #f4f7f6;
+            max-width: 600px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        h1 { 
+            color: #2c3e50; 
+            border-bottom: 2px solid #2ecc71;
+            padding-bottom: 10px;
+        }
+        p { 
+            font-style: italic; 
+            color: #34495e; 
+            background-color: #ecf0f1;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #e74c3c; /* Колір, щоб виділити вставлені слова */
+        }
+    </style>
+</head>
+<body>
+    <!-- Перше речення буде відображено тут (створено через оператор +) -->
+    <h1 id="sentence1"></h1>
+    <!-- Друге речення буде відображено тут (створено через шаблонний літерал) -->
+    <p id="sentence2"></p>
+    
+    <script>
+        // Create your variables here (Створюємо змінні для історії)
+        let character = "Luna"; // Ім'я персонажа
+        let place = "enchanted forest"; // Місцезнаходження
+        let item = "ancient key"; // Об'єкт
+        let action = "discovered"; // Дієслово
+        
+        // Use + to concatenate (Об'єднуємо рядки за допомогою оператора +)
+        // Використовуємо <span> для стилізації змінних
+        let firstSentence = `<span class="highlight">${character}</span> went to the <span class="highlight">${place}</span>.`;
+        
+        // Відображаємо перше речення в елементі H1
+        document.getElementById('sentence1').innerHTML = firstSentence;
+        
+        // Use template literals with ${} (Використовуємо шаблонні літерали ${} для гнучкішого об'єднання)
+        let secondSentence = `She <span class="highlight">${action}</span> a magical <span class="highlight">${item}</span>!`;
+        
+        // Відображаємо друге речення в елементі P
+        document.getElementById('sentence2').innerHTML = secondSentence;
+
+        // Log the results to the console for debugging (Логуємо результати в консоль для перевірки)
+        console.log("Sentence 1 (Concatenation +):", character + " went to the " + place + ".");
+        console.log("Sentence 2 (Template Literal):", `She ${action} a magical ${item}!`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Info Card</title>
+    <!-- Додаємо базові стилі для привабливого вигляду інформаційної картки -->
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            max-width: 400px; 
+            margin: 20px auto; 
+            background-color: #ecf0f1; 
+            border-radius: 8px; 
+        }
+        h1 { 
+            color: #9b59b6; 
+            border-bottom: 1px solid #9b59b6; 
+            padding-bottom: 10px; 
+        }
+        p { 
+            margin: 5px 0; 
+            padding: 10px; 
+            border-left: 5px solid #9b59b6; /* Яскрава лінія зліва */
+            background-color: white; 
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>Personal Information</h1>
+    
+    <!-- Елементи для виводу інформації -->
+    <p id="name"></p>
+    <p id="email"></p>
+    <p id="phone"></p>
+    <p id="location"></p>
+    <p id="hobby"></p>
+    
+    <script>
+        // Create your variables here (Створюємо змінні для інформаційної картки)
+        let fullName = "Illia Prorokov"; // Повне ім'я
+        let emailAddress = "illia.prorokov.dev@example.com"; // Електронна адреса
+        let phoneNumber = "+380 97 123 4567"; // Номер телефону
+        let city = "Brunswick OHIO"; // Місто
+        let favoriteHobby = "Playing Guitar"; // Улюблене хобі
+        
+        // Use template literals to format and display (Використовуємо шаблонні літерали для форматування та відображення)
+        
+        // Name (Ім'я)
+        document.getElementById('name').textContent = `Name: ${fullName}`;
+        
+        // Email (Електронна пошта)
+        document.getElementById('email').textContent = `Email: ${emailAddress}`;
+        
+        // Phone (Номер телефону)
+        document.getElementById('phone').textContent = `Phone: ${phoneNumber}`;
+        
+        // Location (Місто)
+        document.getElementById('location').textContent = `Location: ${city}`;
+        
+        // Hobby (Хобі)
+        document.getElementById('hobby').textContent = `Hobby: ${favoriteHobby}`;
+
+        // Log to console for verification (Логуємо в консоль для перевірки)
+        console.log('Info card data displayed successfully.');
+    </script>
+</body>
+</html>
